@@ -1,8 +1,7 @@
 from graphframes import *
 
-from pyspark import *
-from pyspark.sql import *
-
+#from pyspark import *
+#from pyspark.sql import *
 #spark = SparkSession.builder.appName('fun').getOrCreate()
 
 vertices = spark.createDataFrame([('1', 'Carter', 'Derrick', 50), 
@@ -33,5 +32,5 @@ g.edges.show()
 ## Check the number of edges of each vertex
 g.degrees.show()
 
-# 
+# The number of triangles passing through each vertex,
 g.triangleCount().show()
